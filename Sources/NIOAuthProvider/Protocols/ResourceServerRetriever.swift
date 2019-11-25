@@ -1,3 +1,3 @@
-//public protocol ResourceServerRetriever {
-//    func getServer(_ username: String) -> OAuthResourceServer?
-//}
+public protocol ResourceServerRetriever {
+    func getServer(_ username: String) -> OAuthResourceServer?
+}

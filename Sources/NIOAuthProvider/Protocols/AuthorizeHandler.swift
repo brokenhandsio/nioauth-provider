@@ -1,10 +1,10 @@
-//import HTTP
-//import URI
+//import Foundation
+//import NIO
 //
 //public protocol AuthorizeHandler {
-//    func handleAuthorizationRequest(_ request: Request,
-//                                    authorizationRequestObject: AuthorizationRequestObject) throws -> ResponseRepresentable
-//    func handleAuthorizationError(_ errorType: AuthorizationError) throws -> ResponseRepresentable
+//    func handleAuthorizationRequest(_ request: HTTPRequest,
+//                                    authorizationRequestObject: AuthorizationRequestObject) throws -> HTTPResponse
+//    func handleAuthorizationError(_ errorType: AuthorizationError) throws -> HTTPResponse
 //}
 //
 //public enum AuthorizationError: Error {
@@ -17,7 +17,7 @@
 //public struct AuthorizationRequestObject {
 //    public let responseType: String
 //    public let clientID: String
-//    public let redirectURI: URI
+//    public let redirectURI: URL
 //    public let scope: [String]
 //    public let state: String?
 //    public let csrfToken: String
