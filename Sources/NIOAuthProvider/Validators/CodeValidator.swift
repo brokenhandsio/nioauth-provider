@@ -1,7 +1,7 @@
 import Foundation
 
-struct CodeValidator {
-    func validateCode(_ code: OAuthCode, clientID: String, redirectURI: String) -> Bool {
+struct CodeValidator<UserIDType> where UserIDType: Codable {
+    func validateCode(_ code: OAuthCode<UserIDType>, clientID: String, redirectURI: String) -> Bool {
         guard code.clientID == clientID else {
             return false
         }

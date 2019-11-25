@@ -1,4 +1,4 @@
-public enum OAuthFlowType: String {
+public enum OAuthFlowType: String, Codable {
     case authorization = "authorization_code"
     case implicit = "implicit"
     case password = "password"

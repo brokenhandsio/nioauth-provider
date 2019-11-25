@@ -1,15 +1,13 @@
 import Foundation
 
-public final class AccessToken {
+public final class AccessToken<UserIDType>: Codable where UserIDType: Codable {
     public let tokenString: String
     public let clientID: String
-    public let userID: UUID? // TODO
+    public let userID: UserIDType?
     public let scopes: [String]?
     public let expiryTime: Date
 
-    public var extend: [String: Any] = [:]
-
-    public init(tokenString: String, clientID: String, userID: UUID?, scopes: [String]? = nil, expiryTime: Date) {
+    public init(tokenString: String, clientID: String, userID: UserIDType?, scopes: [String]? = nil, expiryTime: Date) {
         self.tokenString = tokenString
         self.clientID = clientID
         self.userID = userID

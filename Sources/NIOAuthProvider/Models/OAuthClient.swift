@@ -1,4 +1,4 @@
-public final class OAuthClient {
+public final class OAuthClient: Codable {
 
     public let clientID: String
     public let redirectURIs: [String]?
@@ -7,8 +7,6 @@ public final class OAuthClient {
     public let confidentialClient: Bool?
     public let firstParty: Bool
     public let allowedGrantType: OAuthFlowType
-
-    public var extend: [String: Any] = [:]
 
     public init(clientID: String, redirectURIs: [String]?, clientSecret: String? = nil, validScopes: [String]? = nil,
                 confidential: Bool? = nil, firstParty: Bool = false, allowedGrantType: OAuthFlowType) {

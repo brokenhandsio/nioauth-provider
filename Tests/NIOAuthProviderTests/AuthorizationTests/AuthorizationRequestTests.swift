@@ -3,25 +3,25 @@ import NIOAuthProvider
 import NIO
 
 class AuthorizationRequestTests: XCTestCase {    
-//
-//    // MARK: - Properties
-//
+
+    // MARK: - Properties
+
 //    var drop: Droplet!
 //    let fakeClientRetriever = FakeClientGetter()
 //    let capturingAuthoriseHandler = CapturingAuthoriseHandler()
 //    let clientID = "1234567890"
 //    let redirectURI = "https://api.brokenhands.io/callback"
-//
-//    // MARK: - Overrides
-//
-//    override func setUp() {
+
+    // MARK: - Overrides
+
+    override func setUp() {
 //        let oauthClient = OAuthClient(clientID: clientID, redirectURIs: [redirectURI], allowedGrantType: .authorization)
 //        fakeClientRetriever.validClients[clientID] = oauthClient
 //        drop = try! TestDataBuilder.getOAuthDroplet(clientRetriever: fakeClientRetriever, authorizeHandler: capturingAuthoriseHandler)
-//    }
-//
-//    // MARK: - Tests
-//
+    }
+
+    // MARK: - Tests
+
 //    func testThatAuthorizationCodeRequestCallsAuthoriseHandlerWithQueryParameters() throws {
 //        let responseType = "code"
 //
@@ -31,7 +31,7 @@ class AuthorizationRequestTests: XCTestCase {
 //        XCTAssertEqual(capturingAuthoriseHandler.clientID, clientID)
 //        XCTAssertEqual(capturingAuthoriseHandler.redirectURI, URIParser.shared.parse(bytes: redirectURI.makeBytes()))
 //    }
-//
+
 //    func testThatAuthorizationTokenRequestRedirectsToAuthoriseApplicationPage() throws {
 //        let responseType = "token"
 //        let implicitClientID = "implicit"

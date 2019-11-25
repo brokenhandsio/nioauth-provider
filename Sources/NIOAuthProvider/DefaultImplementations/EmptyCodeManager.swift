@@ -6,7 +6,7 @@ public struct EmptyCodeManager: CodeManager {
     
     public init() {}
 
-    public func getCode(_ code: String) -> OAuthCode? {
+    public func getCode(_ code: String) -> OAuthCode<UserIDType>? {
         return nil
     }
 
@@ -14,5 +14,5 @@ public struct EmptyCodeManager: CodeManager {
         return ""
     }
 
-    public func codeUsed(_ code: OAuthCode) {}
+    public func codeUsed(_ code: OAuthCode<UserIDType>) {}
 }

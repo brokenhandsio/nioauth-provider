@@ -1,14 +1,10 @@
-import Foundation
-
-public final class RefreshToken {
+public final class RefreshToken<UserIDType>: Codable where UserIDType: Codable {
     public let tokenString: String
     public let clientID: String
-    public let userID: UUID? // TODO
+    public let userID: UserIDType?
     public var scopes: [String]?
 
-    public var extend: [String: Any] = [:]
-
-    public init(tokenString: String, clientID: String, userID: UUID?, scopes: [String]? = nil) {
+    public init(tokenString: String, clientID: String, userID: UserIDType?, scopes: [String]? = nil) {
         self.tokenString = tokenString
         self.clientID = clientID
         self.userID = userID

@@ -1,12 +1,10 @@
-public final class OAuthUser<T> {
+public final class OAuthUser<UserIDType>: Codable where UserIDType: Codable {
     public let username: String
     public let emailAddress: String?
     public var password: String
-    public var userID: T?
+    public var userID: UserIDType?
 
-    public var extend: [String: Any] = [:]
-
-    public init(userID: T? = nil, username: String, emailAddress: String?, password: String) {
+    public init(userID: UserIDType? = nil, username: String, emailAddress: String?, password: String) {
         self.username = username
         self.emailAddress = emailAddress
         self.password = password

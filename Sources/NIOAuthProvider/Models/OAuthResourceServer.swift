@@ -1,13 +1,11 @@
-//import Authentication
-//import Vapor
-//
-//public final class OAuthResourceServer: Extendable {
-//    public let username: String
-//    public let password: Bytes
-//    public var extend: [String: Any] = [:]
-//
-//    public init(username: String, password: Bytes) {
-//        self.username = username
-//        self.password = password
-//    }
-//}
+import Foundation
+
+public final class OAuthResourceServer: Codable {
+    public let username: String
+    public let password: String
+
+    public init(username: String, password: String) {
+        self.username = username
+        self.password = password
+    }
+}

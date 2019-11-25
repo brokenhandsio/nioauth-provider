@@ -1,6 +1,6 @@
-struct TokenAuthenticator {
+struct TokenAuthenticator<UserIDType> where UserIDType: Codable {
 
-    func validateRefreshToken(_ refreshToken: RefreshToken, clientID: String) -> Bool {
+    func validateRefreshToken(_ refreshToken: RefreshToken<UserIDType>, clientID: String) -> Bool {
         guard refreshToken.clientID  == clientID else {
             return false
         }
@@ -8,7 +8,7 @@ struct TokenAuthenticator {
         return true
     }
 
-    func validateAccessToken(_ accessToken: AccessToken, requiredScopes: [String]?) -> Bool {
+    func validateAccessToken(_ accessToken: AccessToken<UserIDType>, requiredScopes: [String]?) -> Bool {
         guard let scopes = requiredScopes else {
             return true
         }
